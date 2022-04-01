@@ -1,0 +1,11 @@
+<div id="<%= dom_id room %>">
+  <h4 class="display-6 mt-2"><strong><%= room.name %></strong></h4>
+  <% @room.messages.each do |message| %>
+  <p><%= message.content %></p>
+  <% end %>
+
+  <%= form_for Message.new, method: :post, url: room_messages_path(@room.id), remote: true do |f| %>
+    <%= f.rich_text_area :content %>
+    <%= f.submit %>
+  <% end %>
+</div>
