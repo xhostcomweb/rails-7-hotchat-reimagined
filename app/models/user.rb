@@ -13,12 +13,16 @@ class User < ApplicationRecord
   def set_default_role
     self.role ||= :user
   end
+  # Turbo
+  after_create_commit { broadcast_append_to 'users' }
   # Validations
+  scope :all_except, ->(user) { where.not(id: user) }
   validates :email, presence: true
   validates :email, uniqueness: true
   # validates :username, presence: true
   has_one_attached :avatar
   has_person_name
+  # has_many :messages
 
   # Notifications & Services
   has_many :notifications, as: :recipient

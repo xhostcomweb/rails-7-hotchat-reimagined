@@ -4,7 +4,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0] # rubocop:todo Style/Docu
   def change # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
     create_table :users do |t|
       ## Database authenticatable
-      # t.string :username, null: false, default: ''
+      t.string :username, null: false, default: ''
       t.string :email, null: false, default: ''
       t.string :encrypted_password, null: false, default: ''
 

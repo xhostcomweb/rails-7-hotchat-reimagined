@@ -1,17 +1,12 @@
 <div class="center jumbotron mt-5 mb-4">
   <div class="container">
-   <!-- testing user roles, remove block -->
-  <% if current_user  %>
-    <p>Hello <%= current_user.first_name %></p>
-    <p> You have successfully activated your account in/as a registered <%= current_user.role %> role</p>
-    <p>Awesome!</p>
-    <% end %>
     <div class="center">
-     <h1 class="display-6">
-          <span class="display-6--intro">Ruby on Rails 7 App Starter Kit!</span></h1>
-           <i class="fa fa-bell fa-4x"></i>
-             <p class="lead">
-           Built with latest Rails 7, PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise Auth, Email Sends, User Avatars, Notifications, Announcements,  Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Turbo, Stimulus JS, Hotwire, Action Cable, Cable Ready <br /> Request JS, Rubocop, Rspec & Multi Tenancy Support!
+     <h3 class="display-4">
+       <small class="text-muted">HotChat For People Who Chat A Lot!</small>
+     </h3>
+      <p class="lead">
+          Awesome Rails 7 Chat Machine for Incessant Chatterers with Membership Roles and a Stalking Mode<br />
+        (Just kidding, no stalking allowed!)
           </p>
      </div>
    </div>
@@ -20,16 +15,10 @@
   <div class="container">
     <div class="row align-items-center text-dark">
       <!-- START THE CONTENT FOR THE INTRO  -->
-      <div class="col-md-6 intros text-left">
-       <%= link_to image_tag('rails.webp', class: "img-fluid", alt: "Hotwire", :size => '542x337') %>
-          <%= link_to "Get In Touch!", new_user_registration_path, class: "btn btn-outline-dark btn-rounded btn-lg mt-5" %>
-     </div>
-    
-      <div class="col-md-6 intros text-right">
-        <div class="container">
-        <%= link_to image_tag('intro.png'), root_path, class: "img-fluid", alt: "Illustration" %>
-       </div>
+      <div class="col-md-12 intros text-center">
+       <%= link_to image_tag('bubble-icon.webp', class: "img-fluid mb-5", alt: "Hotchat", :size => '600x518') %>
+        <%= link_to "Sign Up To Chat", new_user_registration_path, class: "btn btn-outline-primary btn-rounded btn-lg mt-5" %>
       </div>
-    </div>
+      </div>
   </div>
  </section>
