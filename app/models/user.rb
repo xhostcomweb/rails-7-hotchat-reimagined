@@ -22,7 +22,7 @@ class User < ApplicationRecord
   # validates :username, presence: true
   has_one_attached :avatar
   has_person_name
-  # has_many :messages
+  has_many :messages
 
   # Notifications & Services
   has_many :notifications, as: :recipient

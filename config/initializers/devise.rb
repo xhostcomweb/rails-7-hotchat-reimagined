@@ -10,7 +10,7 @@ class TurboFailureApp < Devise::FailureApp
   end
 
   def skip_format?
-    %w(html turbo_stream */*).include? request_format.to_s
+    %w[html turbo_stream */*].include? request_format.to_s
   end
 end
 # Assuming you have not yet modified this file, each configuration option below
@@ -45,8 +45,7 @@ Devise.setup do |config|
     #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   end
 
-
-# ==> Mailer Configuration
+  # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
