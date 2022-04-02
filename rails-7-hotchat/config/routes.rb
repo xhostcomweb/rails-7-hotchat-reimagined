@@ -16,8 +16,9 @@ Rails.application.routes.draw do
   resources :announcements, only: [:index]
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   devise_scope :user do
-    get 'users' => 'devise/sessions#new'
+    # get 'users' => 'devise/sessions#new'
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+  get 'user/:id', to: 'users#show', as: 'user'
   root to: 'home#index'
 end
