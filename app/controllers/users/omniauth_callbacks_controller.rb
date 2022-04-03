@@ -64,8 +64,6 @@ module Users
       end
     end
 
-
-
     def service_attrs # rubocop:todo Metrics/AbcSize
       expires_at = auth.credentials.expires_at.present? ? Time.at(auth.credentials.expires_at) : nil
       {
