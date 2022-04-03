@@ -1,4 +1,4 @@
-# rails 7 hotchat
+# rails 7 hotchatter
 
 Epic Ruby On Rails 7 chatroom app with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus JS GLightbox and Action Cable/Cable Ready & Request JS. 
 
