@@ -1,5 +1,4 @@
-
-<div id="chatroom_container" class="row bg-custom text-light pt-4 mt-5">
+ <div id="chatroom_container" class="row bg-custom text-light pt-4 mt-5">
   <div id="side_panel" class="col-md-4 col-sm-4">
     <button type="button" class="btn btn-warning mb-3"><strong>HotChatter</strong> <span class="badge bg-success"><%= current_user.email %></span>
     </button>
@@ -10,9 +9,9 @@
     </div>
     <h4 class="pt-3 mb-3"> Rooms </h4>
     <%= turbo_stream_from "rooms" %>
+    <%= render 'layouts/new_room_form' %>
     <div id="rooms" class="mt-3">
       <%= render @rooms%>
-      <%= render 'layouts/new_room_form' %>
     </div>
   </div>
   <div id="room_container" class="col-md-8 col-sm-8 bg-custom text-light">
