@@ -1,3 +1,17 @@
-<div>
-  <%= link_to user.email, user %>
-</div>
+<% if @single_room && @single_room.participant?(@single_room, user) %>
+  <% isActive = 'active' %>
+<% else %>
+  <% isActive = '' %>
+<% end %>
+
+<li class="list-group-item d-flex align-items-center justify-content-between user_list_item list-group-item-primary <%= isActive %>">
+  <div>
+
+    <%= turbo_stream_from %>
+    <div>
+      <!-- User Online/Away/Offline status bubble -->
+    </div>
+  </div>
+  <h5 class="mb-1"><%= link_to user.email, user, class:'ms-2 me-auto username' %></h5>
+  <small>3 days ago</small> <span class="badge bg-primary rounded-pill">14</span>
+</li>
